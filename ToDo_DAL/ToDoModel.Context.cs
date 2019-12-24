@@ -13,10 +13,10 @@ namespace ToDo_DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TODOEntities : DbContext
+    public partial class ToDoContext : DbContext
     {
-        public TODOEntities()
-            : base("name=TODOEntities")
+        public ToDoContext()
+            : base("name=ToDoContext")
         {
         }
     

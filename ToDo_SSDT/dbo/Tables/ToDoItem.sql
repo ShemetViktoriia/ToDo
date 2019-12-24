@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[ToDoItem] (
 [Id] INT IDENTITY,
 [Description] NVARCHAR(500) NOT NULL,
 [AddedAt] DateTime NOT NULL,
-[AddedBy] [nvarchar](128) NOT NULL,
+[AddedBy] [int] NOT NULL,
 [WasDone] [bit] NOT NULL,
 [WasDoneAt] DateTime NULL,
 [DueDate] DateTime NULL

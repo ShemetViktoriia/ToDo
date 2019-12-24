@@ -6,7 +6,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[AspNetUsers](
-	[Id] [nvarchar](128) NOT NULL,
+	[Id] [int] IDENTITY (1, 1) NOT NULL,
 	[Email] [nvarchar](256) NULL,
 	[EmailConfirmed] [bit] NOT NULL,
 	[PasswordHash] [nvarchar](max) NULL,
