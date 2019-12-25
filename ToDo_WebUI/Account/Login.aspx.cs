@@ -35,7 +35,8 @@ namespace ToDo_WebUI.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        Response.Redirect("/ToDo/ShowGrid");
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
