@@ -73,10 +73,15 @@
     </Compile>
     <Compile Include="Extension\AspNetRole.cs" />
     <Compile Include="Extension\AspNetUser.cs" />
-    <Compile Include="Extension\AspNetUserClaim.cs" />
-    <Compile Include="Extension\AspNetUserLogin.cs" />
-    <Compile Include="Extension\AspNetUserRole.cs" />
+    <Compile Include="Extension\ToDoContext.cs" />
+    <Compile Include="Identity\RoleStore.cs" />
+    <Compile Include="Identity\UserStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ToDoItem.cs">
       <DependentUpon>ToDoModel.tt</DependentUpon>
     </Compile>
@@ -120,6 +125,12 @@
       <DependentUpon>ToDoModel.edmx</DependentUpon>
       <LastGenOutput>ToDoModel.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

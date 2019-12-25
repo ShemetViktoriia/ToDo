@@ -18,6 +18,7 @@ namespace ToDo_DAL
         public ToDoContext()
             : base("name=ToDoContext")
         {
+            base.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

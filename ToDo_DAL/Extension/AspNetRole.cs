@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity;
 
 namespace ToDo_DAL
 {
-    public partial class AspNetRole : IdentityRole<int, AspNetUserRole>
+    public partial class AspNetRole : IRole<int>
     {
 
     }

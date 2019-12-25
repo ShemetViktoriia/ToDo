@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Web;
 using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using ToDo_WebUI.Models;
 
 namespace ToDo_WebUI.Account
 {
