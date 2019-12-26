@@ -60,6 +60,7 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
     <Folder Include="Scripts" />
+    <Folder Include="Scripts\PostPublishScripts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbo\Tables\AspNetUsers.sql" />
@@ -68,5 +69,11 @@
     <None Include="dbo\Tables\AspNetUserLogins.sql" />
     <None Include="dbo\Tables\AspNetUserClaims.sql" />
     <None Include="dbo\Tables\ToDoItem.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\PostPublishScripts\InsertData_ToDoItem.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostPublishScripts\PostPublishScripts.sql" />
   </ItemGroup>
 </Project>
