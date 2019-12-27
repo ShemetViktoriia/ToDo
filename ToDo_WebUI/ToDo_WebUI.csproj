@@ -90,6 +90,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R3 2019\Bin45\Telerik.Web.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2019.3.1023.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -218,6 +222,8 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\Mapper.cs" />
+    <Compile Include="Models\ToDoItemViewModel.cs" />
     <Compile Include="ToDo\ShowGrid.aspx.cs">
       <DependentUpon>ShowGrid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,6 +313,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ToDo_BLL\ToDo_BLL.csproj">
+      <Project>{4a7491b9-58e6-4397-a270-8e503d42d7cb}</Project>
+      <Name>ToDo_BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ToDo_DAL\ToDo_DAL.csproj">
       <Project>{6e0ea520-7437-4ffe-a40a-53c48d8c381b}</Project>
       <Name>ToDo_DAL</Name>
