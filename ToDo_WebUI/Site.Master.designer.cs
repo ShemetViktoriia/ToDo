@@ -13,6 +13,15 @@ namespace ToDo_WebUI {
     public partial class SiteMaster {
         
         /// <summary>
+        /// RadScriptManager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

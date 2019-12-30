@@ -13,11 +13,12 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link href="~/Content/Styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form runat="server">
-        <asp:ScriptManager runat="server">
+        <telerik:RadScriptManager runat="server" ID="RadScriptManager">
+        <%--<asp:ScriptManager runat="server">--%>
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
@@ -35,7 +36,8 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
-        </asp:ScriptManager>
+        </telerik:RadScriptManager>
+        <%--</asp:ScriptManager>--%>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">

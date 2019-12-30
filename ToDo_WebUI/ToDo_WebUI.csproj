@@ -161,6 +161,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Styles.css" />
+    <Content Include="ToDo\ToDoItemDetails.ascx" />
     <Content Include="ToDo\ShowGrid.aspx" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Login.aspx" />
@@ -224,6 +226,13 @@
   <ItemGroup>
     <Compile Include="Mapping\Mapper.cs" />
     <Compile Include="Models\ToDoItemViewModel.cs" />
+    <Compile Include="ToDo\ToDoItemDetails.ascx.cs">
+      <DependentUpon>ToDoItemDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToDo\ToDoItemDetails.ascx.designer.cs">
+      <DependentUpon>ToDoItemDetails.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ToDo\ShowGrid.aspx.cs">
       <DependentUpon>ShowGrid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
