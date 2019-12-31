@@ -5,9 +5,10 @@ namespace ToDo_Repository
 {
     public interface IToDoItemRepository
     {
-        ToDoItem Add(ToDoItem entity);
+        void Add(ToDoItem entity);
         ToDoItem FindById(int id);
         IEnumerable<ToDoItem> FindAll();
         void Edit(ToDoItem entity);
+        void Delete(int id);
     }
 }

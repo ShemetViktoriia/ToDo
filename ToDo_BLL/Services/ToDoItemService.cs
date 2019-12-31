@@ -15,7 +15,18 @@ namespace ToDo_BLL.Services
             _toDoRepo = toDoRepo;
         }
 
-        public IEnumerable<ToDoItemDTO> GetAllToDoItems()
+        public void AddItem(ToDoItemDTO item)
+        {
+            var toDoEntity = item.Map_ToDo_DTO_Entity();
+            _toDoRepo.Add(toDoEntity);
+        }
+
+        public void DeleteItem(int id)
+        {
+            _toDoRepo.Delete(id);
+        }
+
+        public IEnumerable<ToDoItemDTO> GetAllItems()
         {
             var toDoItemsDTOList = new List<ToDoItemDTO>();
             var toDoItemsList = _toDoRepo.FindAll().ToList();

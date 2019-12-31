@@ -9,11 +9,15 @@
     <tr>
         <td>
             <table id="Table2" border="0" class="module">
+<%--                <asp:Label ID="ToDoIdLabel" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Id") %>'
+                    Hidden ="true">
+                </asp:Label>--%>
                 <tr>
                     <td>Description:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Description") %>'>
+                        <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Description") %>'
+                            TextMode="MultiLine" Rows="4" Columns="30">
                         </asp:TextBox>
                     </td>
                 </tr>
@@ -21,18 +25,19 @@
                     <td>Was Done:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.wasDone") %>'>' TabIndex="1">
-                        </asp:TextBox>
+                        <telerik:RadCheckBox runat="server" ID="WasDoneCheckBox" Checked='<%# DataBinder.Eval(Container, "DataItem.WasDone") %>'>
+                        </telerik:RadCheckBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Due Date:
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox3" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.DueDate") %>'>' TabIndex="2">
-                        </asp:TextBox>
+                        <telerik:RadDateTimePicker RenderMode="Lightweight" ID="DueDateTimePicker" Width="100%" runat="server"
+                            MinDate="1/1/2000" DbSelectedDate='<%# DataBinder.Eval(Container, "DataItem.DueDate") %>' TabIndex="2">
+                        </telerik:RadDateTimePicker>
                     </td>
-                </tr>        
+                </tr>
             </table>
         </td>
     </tr>

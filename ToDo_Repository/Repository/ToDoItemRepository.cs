@@ -16,15 +16,24 @@ namespace ToDo_Repository
             _dbset = context.Set<ToDoItem>();
         }
 
-        public ToDoItem Add(ToDoItem entity)
+        public void Add(ToDoItem entity)
         {
-            return _dbset.Add(entity);
+            _dbset.Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            ToDoItem ent = _dbset.Find(id);
+            _dbset.Remove(ent);
+            _context.SaveChanges();
         }
 
         public void Edit(ToDoItem entity)
         {
             _dbset.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public IEnumerable<ToDoItem> FindAll()

@@ -13,15 +13,6 @@ namespace ToDo_WebUI.ToDo {
     public partial class ShowGrid {
         
         /// <summary>
-        /// RadSkinManager control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadSkinManager RadSkinManager;
-        
-        /// <summary>
         /// RadCodeBlock control.
         /// </summary>
         /// <remarks>
@@ -65,5 +56,14 @@ namespace ToDo_WebUI.ToDo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid ToDoItemGrid;
+        
+        /// <summary>
+        /// RadWindowManager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadWindowManager RadWindowManager;
     }
 }

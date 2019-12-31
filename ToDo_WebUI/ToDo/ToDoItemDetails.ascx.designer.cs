@@ -13,31 +13,31 @@ namespace ToDo_WebUI {
     public partial class ToDoItemDetails {
         
         /// <summary>
-        /// TextBox1 control.
+        /// DescriptionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox DescriptionTextBox;
         
         /// <summary>
-        /// TextBox2 control.
+        /// WasDoneCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::Telerik.Web.UI.RadCheckBox WasDoneCheckBox;
         
         /// <summary>
-        /// TextBox3 control.
+        /// DueDateTimePicker control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::Telerik.Web.UI.RadDateTimePicker DueDateTimePicker;
         
         /// <summary>
         /// btnUpdate control.
