@@ -9,9 +9,6 @@
     <tr>
         <td>
             <table id="Table2" border="0" class="module">
-<%--                <asp:Label ID="ToDoIdLabel" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Id") %>'
-                    Hidden ="true">
-                </asp:Label>--%>
                 <tr>
                     <td>Description:
                     </td>
@@ -19,6 +16,9 @@
                         <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Description") %>'
                             TextMode="MultiLine" Rows="4" Columns="30">
                         </asp:TextBox>
+                        <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator" ControlToValidate="DescriptionTextBox"
+                            ErrorMessage="Description is required!">
+                        </asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

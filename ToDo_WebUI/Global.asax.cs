@@ -29,9 +29,9 @@ namespace ToDo_WebUI
             var builder = new ContainerBuilder();
             builder.RegisterType<ToDoContext>()
                    .As<DbContext>()
-                   .InstancePerLifetimeScope();
-            builder.RegisterType(typeof(ToDoItemRepository)).As(typeof(IToDoItemRepository)).InstancePerLifetimeScope();
-            builder.RegisterType(typeof(ToDoItemService)).As(typeof(IToDoItemService)).InstancePerLifetimeScope();
+                   .InstancePerRequest();
+            builder.RegisterType(typeof(ToDoItemRepository)).As(typeof(IToDoItemRepository)).InstancePerRequest();
+            builder.RegisterType(typeof(ToDoItemService)).As(typeof(IToDoItemService)).InstancePerRequest();
 
             // Once you're done registering things, set the container
             // provider up with your registrations.

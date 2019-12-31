@@ -5,8 +5,9 @@ namespace ToDo_BLL.Services
 {
     public interface IToDoItemService
     {
+        ToDoItemDTO FindById(int id);
         IEnumerable<ToDoItemDTO> GetAllItems();
         void DeleteItem(int id);
-        void AddItem(ToDoItemDTO item);
+        void AddOrEditItem(ToDoItemDTO item);
     }
 }

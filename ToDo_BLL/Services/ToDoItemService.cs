@@ -15,15 +15,20 @@ namespace ToDo_BLL.Services
             _toDoRepo = toDoRepo;
         }
 
-        public void AddItem(ToDoItemDTO item)
+        public void AddOrEditItem(ToDoItemDTO item)
         {
             var toDoEntity = item.Map_ToDo_DTO_Entity();
-            _toDoRepo.Add(toDoEntity);
+            _toDoRepo.AddOrEdit(toDoEntity);
         }
 
         public void DeleteItem(int id)
         {
             _toDoRepo.Delete(id);
+        }
+
+        public ToDoItemDTO FindById(int id)
+        {
+            return _toDoRepo.FindById(id).Map_ToDo_Entity_DTO();
         }
 
         public IEnumerable<ToDoItemDTO> GetAllItems()

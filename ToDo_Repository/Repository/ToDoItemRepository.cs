@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using ToDo_DAL;
 
@@ -16,9 +17,9 @@ namespace ToDo_Repository
             _dbset = context.Set<ToDoItem>();
         }
 
-        public void Add(ToDoItem entity)
+        public void AddOrEdit(ToDoItem entity)
         {
-            _dbset.Add(entity);
+            _dbset.AddOrUpdate(entity);
             _context.SaveChanges();
         }
 
@@ -26,13 +27,6 @@ namespace ToDo_Repository
         {
             ToDoItem ent = _dbset.Find(id);
             _dbset.Remove(ent);
-            _context.SaveChanges();
-        }
-
-        public void Edit(ToDoItem entity)
-        {
-            _dbset.Attach(entity);
-            _context.Entry(entity).State = EntityState.Modified;
             _context.SaveChanges();
         }
 

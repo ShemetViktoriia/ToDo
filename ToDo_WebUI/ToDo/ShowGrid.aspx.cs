@@ -56,18 +56,28 @@ namespace ToDo_WebUI.ToDo
         {
             var toDoItemViewModel = getModelFromUserControl(e);
             GridEditableItem editedItem = e.Item as GridEditableItem;
-            var toDoId = (int)editedItem.OwnerTableView.DataKeyValues[editedItem.ItemIndex]["Id"];
-            toDoItemViewModel.Id = toDoId;
+            var id = (int)editedItem.OwnerTableView.DataKeyValues[editedItem.ItemIndex]["Id"];
+            var toDoModel = ToDoservice.FindById(id).Map_ToDo_DTO_ViewModel();
 
+            // set the rest of the properties that are not in control, from DB
+            toDoItemViewModel.Id = id;
+            toDoItemViewModel.AddedAt = toDoModel.AddedAt;
+            toDoItemViewModel.AddedByUserId = toDoModel.AddedByUserId;
+            toDoItemViewModel.WasDoneAt = toDoModel.WasDoneAt;
+
+            ToDoservice.AddOrEditItem(toDoItemViewModel.Map_ToDo_ViewModel_DTO());
         }
 
         protected void ToDoItemGrid_InsertCommand(object source, GridCommandEventArgs e)
         {
             var toDoItemViewModel = getModelFromUserControl(e);
+
+            // set the rest of the properties that are not in control
             toDoItemViewModel.AddedAt = DateTime.Now;
             toDoItemViewModel.AddedByUserId = User.Identity.GetUserId<int>();
             toDoItemViewModel.WasDoneAt = null;
-            ToDoservice.AddItem(toDoItemViewModel.Map_ToDo_ViewModel_DTO());
+
+            ToDoservice.AddOrEditItem(toDoItemViewModel.Map_ToDo_ViewModel_DTO());
         }
 
         protected void ToDoItemGrid_DeleteCommand(object source, GridCommandEventArgs e)

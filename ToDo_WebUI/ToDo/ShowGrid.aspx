@@ -45,9 +45,6 @@
                     <telerik:GridEditCommandColumn UniqueName="EditCommandColumn">
                     </telerik:GridEditCommandColumn>
                     <telerik:GridBoundColumn UniqueName="Description" HeaderText="Description" DataField="Description">
-                        <ColumnValidationSettings EnableRequiredFieldValidation="true">
-                            <RequiredFieldValidator ErrorMessage="This field is required!" Display="Dynamic"></RequiredFieldValidator>
-                        </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
                     <telerik:GridCheckBoxColumn UniqueName="WasDone" HeaderText="Was Done" DataField="WasDone">
                     </telerik:GridCheckBoxColumn>
